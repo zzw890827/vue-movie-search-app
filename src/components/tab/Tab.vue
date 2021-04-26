@@ -1,11 +1,13 @@
 <template>
   <div class="tab">
     <router-link
-      class="tab-item"
-      v-fot="tab in tabList"
-      :key="tab.path"
-      :to="tab.path"
-    />
+        class="tab-item"
+        v-for="tab in tabList"
+        :key="tab.path"
+        :to="tab.path"
+    >
+      <span class="tab-link"> {{ tab.name }} </span>
+    </router-link>
   </div>
 </template>
 
@@ -22,8 +24,8 @@ export default defineComponent({
           path: '/search'
         },
         {
-          name: 'Recommend',
-          path: '/recommend'
+          name: 'Detail',
+          path: '/detail'
         }
       ]
     }
@@ -49,7 +51,7 @@ export default defineComponent({
 
     &.router-link-active {
       .tab-link {
-        color: $color-text-theme;
+        color: $color-theme;
         border-bottom: 2px solid $color-theme;
       }
     }
