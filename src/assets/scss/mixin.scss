@@ -1,0 +1,11 @@
+// 背景画像
+@mixin bg-image($url) {
+  background-image: url($url);
+}
+
+// 改行禁止
+@mixin no-wrap() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
