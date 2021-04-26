@@ -27,7 +27,7 @@ export default defineComponent({
     width: 30px;
     height: 32px;
     margin-right: 9px;
-    @include bg-image('logo.png');
+    @include bg-image('logo.jpg');
     background-size: 30px 32px;
   }
 
