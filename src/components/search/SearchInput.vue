@@ -35,7 +35,7 @@ export default defineComponent({
   created () {
     this.$watch('query', debounce(300, newQuery => this.$emit('update:modelValue', newQuery.trim())))
     // eslint-disable-next-line no-return-assign
-    this.$watch('modelValue', newQuery => this.query = newQuery)
+    this.$watch('modelValue', (newQuery: string) => this.query = newQuery)
   },
   methods: {
     clear () {
